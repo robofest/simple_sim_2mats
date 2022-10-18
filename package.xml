@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>simple_sim_crosswalk</name>
+  <name>simple_sim_2mats</name>
   <version>0.0.1</version>
-  <description>The simple_sim_crosswalk package</description>
+  <description>The simple_sim_2mats package</description>
 
   <maintainer email="npaul@ltu.edu">Nicholas Paul</maintainer>
+  <maintainer email="cchung@ltu.edu">CJ Chung</maintainer>
   <maintainer email="gderose2@gmail.com">Joe DeRose</maintainer>
 
   <license>MIT</license>
 
-  <url type="website">https://github.com/ltu-ros/simple_sim_crosswalk</url>
+  <url type="website">https://github.com/ltu-ros/simple_sim_2mats</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 </package>

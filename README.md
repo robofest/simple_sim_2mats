@@ -1,5 +1,5 @@
-# `simple_sim_crosswalk`
+# `simple_sim_2mats`
 
-A simulation enviornment for `simple_sim`
+A simulation enviornment for `simple_sim_2mats`
 
-![Map Screenshot](docs/map_screenshot.png)
+![Map Screenshot](docs/2mats.jpg)

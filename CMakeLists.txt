@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(simple_sim_crosswalk)
+project(simple_sim_2mats)
 
 find_package(catkin REQUIRED)
 
