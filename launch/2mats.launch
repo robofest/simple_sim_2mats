@@ -1,5 +1,4 @@
 <launch>
-
   <!-- Load map -->
   <param name="map_dir" value="$(find simple_sim_2mats)/map" />
   <rosparam command="load" file="$(find simple_sim_2mats)/map/2mats.yaml" />
@@ -12,5 +11,4 @@
     <arg name="show_kb_teleop" value="false" />
     <arg name="show_image_view" value="true" />
   </include>
- 
 </launch>
