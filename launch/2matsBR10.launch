@@ -1,0 +1,38 @@
+<launch>
+    <arg name="obj_x" default="0.52" />
+    <arg name="obj_y" default="-0.445" />
+    <arg name="gen_rand_objects" default="true" />
+
+    <!-- Load map -->
+    <param name="map_dir" value="$(find simple_sim_2mats)/map" />
+    <rosparam command="load" file="$(find simple_sim_2mats)/map/2mats.yaml" />
+    <!-- Load robot -->
+    <rosparam command="load" file="$(find simple_sim_2mats)/robot/differential.yaml" />
+
+    <!-- Place robot at origin -->
+    <param name="Xr_init" value="2.67" />
+    <param name="Yr_init" value="-1.06" />
+
+    <!-- Set circ0 to arg values -->
+    <param name="circ0" type="yaml" value="[$(arg obj_x), $(arg obj_y), 0.07]" />
+
+    <group if="$(arg gen_rand_objects)">
+        <!-- Place object in random location -->
+        <!-- Note: Comment this out if you want a static object as defined in sim_params.yaml -->
+        <node pkg="simple_sim_2mats" type="place_random_10.py" name="place_random_10" />
+    </group>
+
+
+    <!-- Launch simple_sim with a 1 second delay -->
+    <!-- If you are getting errors here, make sure timed_roslaunch is installed -->
+    <!-- sudo apt install timed_roslaunch -->
+
+    <node
+        pkg="timed_roslaunch"
+        type="timed_roslaunch.sh"
+        args="1 simple_sim simple_sim.launch show_rviz:=true show_kb_teleop:=false"
+        output="screen"
+        name="timed_roslaunch"
+    />
+
+</launch>

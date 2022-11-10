@@ -1,0 +1,24 @@
+# Field image location
+# Resolution: ??
+field_image_file: '2matsBR.jpg'
+
+# Image file scaling and center 
+# affects the size of robot
+#x_scale: 850
+#y_scale: 850
+
+x_scale: 700
+y_scale: 700
+
+# affects the red/blue axis and the initial location of the bot
+x_center_img: 0
+y_center_img: 0
+
+# Overall scale
+img_view_scale: 0.4
+
+# Default robot start location
+# Can be overriden in launch file
+Xr_init: 2.78
+Yr_init: -1.12
+Theta_init: 180.0
