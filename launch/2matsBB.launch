@@ -1,0 +1,14 @@
+<launch>
+  <!-- Load map -->
+  <param name="map_dir" value="$(find simple_sim_2mats)/map" />
+  <rosparam command="load" file="$(find simple_sim_2mats)/map/2matsBB.yaml" />
+
+  <!-- Load robot -->
+  <rosparam command="load" file="$(find simple_sim_2mats)/robot/differential.yaml" />
+
+  <include file="$(find simple_sim)/launch/simple_sim.launch">
+    <arg name="show_rviz" value="false" />
+    <arg name="show_kb_teleop" value="false" />
+    <arg name="show_image_view" value="true" />
+  </include>
+</launch>
